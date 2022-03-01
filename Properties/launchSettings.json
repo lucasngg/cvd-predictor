@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "MEngProject": {
+      "commandName": "Executable",
+      "executablePath": "D:\\Assessments\\4th MEng group project\\MEngProject\\bin\\Debug\\net5.0\\MEngProject.exe"
+    }
+  }
+}

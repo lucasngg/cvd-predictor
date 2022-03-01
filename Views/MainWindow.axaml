@@ -1,0 +1,65 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:MEngProject.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="1260" d:DesignHeight="600"
+        x:Class="MEngProject.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="MEngProject"
+		TransparencyLevelHint="AcrylicBlur"
+		Background="Transparent"
+		ExtendClientAreaToDecorationsHint="True"
+		WindowStartupLocation="CenterScreen">
+
+    <Design.DataContext>
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+	<Panel>
+		<ExperimentalAcrylicBorder IsHitTestVisible="False">
+			<ExperimentalAcrylicBorder.Material>
+				<ExperimentalAcrylicMaterial
+					BackgroundSource="Digger"
+					TintColor="Black"
+					TintOpacity="1"
+					MaterialOpacity="0.8" />
+			</ExperimentalAcrylicBorder.Material>
+		</ExperimentalAcrylicBorder>
+		
+		<TextBlock Text="CVD Predictor" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,350,50" FontSize="70"/>
+		<TextBlock Text="By Adam, Lucas and Timothy" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,50,440,0" FontSize="20"/>
+
+		<StackPanel Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="275,100,0,0">
+			<TextBlock Text="Age" HorizontalAlignment="Left" VerticalAlignment="Top" Margin=" 100,0,0,5"/> 
+			<TextBox Watermark="Enter here" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top" Margin=" 100,0,0,10"/>
+			<TextBlock Text="Anaemia" HorizontalAlignment="Left" VerticalAlignment="Top" Margin=" 100,0,0,15"/>
+			<TextBox Watermark="Enter here" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top" Margin=" 100,0,0,10"/>
+			<TextBlock Text="Creatinine Phosphokinase" HorizontalAlignment="Left" VerticalAlignment="Top" Margin=" 100,0,0,5"/>
+			<TextBox Watermark="Enter here" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top" Margin=" 100,0,0,10"/>
+			<TextBlock Text="Diabetes" HorizontalAlignment="Left" VerticalAlignment="Top" Margin=" 100,0,0,5"/>
+			<TextBox Watermark="Enter here" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top" Margin=" 100,0,0,10"/>
+			<TextBlock Text="Ejection Fraction" HorizontalAlignment="Left" VerticalAlignment="Top" Margin=" 100,0,0,5"/>
+			<TextBox Watermark="Enter here" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top" Margin=" 100,0,0,10"/>
+			<TextBlock Text="High Blood Pressure" HorizontalAlignment="Left" VerticalAlignment="Top" Margin=" 100,0,0,5"/>
+			<TextBox Watermark="Enter here" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top" Margin=" 100,0,0,10"/>
+			<TextBlock Text="Platelets" HorizontalAlignment="Left" VerticalAlignment="Top" Margin=" 100,0,0,5"/>
+			<TextBox Watermark="Enter here" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top" Margin=" 100,0,0,10"/>
+			<TextBlock Text="Serum Creatinine" HorizontalAlignment="Left" VerticalAlignment="Top" Margin=" 100,0,0,5"/>
+			<TextBox Watermark="Enter here" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top" Margin=" 100,0,0,10"/>
+			<TextBlock Text="Serum Sodium" HorizontalAlignment="Left" VerticalAlignment="Top" Margin=" 100,0,0,5"/>
+			<TextBox Watermark="Enter here" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top" Margin=" 100,0,0,10"/>
+			<TextBlock Text="Sex" HorizontalAlignment="Left" VerticalAlignment="Top" Margin=" 100,0,0,5"/>
+			<TextBox Watermark="Enter here" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top" Margin=" 100,0,0,10"/>
+			<TextBlock Text="Smoking?" HorizontalAlignment="Left" VerticalAlignment="Top" Margin=" 100,0,0,5"/>
+			<TextBox Watermark="Enter here" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top" Margin=" 100,0,0,10"/>
+			<TextBlock Text="Time" HorizontalAlignment="Left" VerticalAlignment="Top" Margin=" 100,0,0,5"/>
+			<TextBox Watermark="Enter here" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top" Margin=" 100,0,0,10"/>
+
+		</StackPanel>
+
+		<Button Content="Predict!" Background="White" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,50" Command="{Binding OnClickCommand}"/>
+
+	</Panel>
+
+</Window>
