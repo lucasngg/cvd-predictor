@@ -1,0 +1,16 @@
+name: cvd-predictor
+base: core18
+version: '1.0'
+summary: CVD Predictor using deep-learning methods.
+description: |
+  a description
+  
+grade: devel
+confinement: devmode
+
+parts:
+  cvd-predictor:
+    source: .
+    plugin: dotnet
+    build-packages:
+    - git
